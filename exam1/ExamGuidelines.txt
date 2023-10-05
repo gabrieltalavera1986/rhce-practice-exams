@@ -1,0 +1,38 @@
+Practice Exam 1 Environment and Guidelines:
+
+Host Requirements: 
+
+-You need four hosts for this practice exam. These should be named control, web01, web02 and dev01.
+
+-The hosts can have RHEL 9.2 and the Labs should work without issues, we used the following Rocky Linux 9.2 image
+for setting up the lab: https://download.rockylinux.org/pub/rocky/9/isos/x86_64/Rocky-9.2-x86_64-dvd.iso
+
+-All four hosts should have internet access to download packages from public YUM repositories.
+
+-A 30GB dynamic hard disk can be used for the OS for each host. Only web02 should have a
+second drive for storage related tasks.
+
+-2048MB of memory is enough for each of the four hosts.
+
+
+General Guidelines:
+
+Read Questions Carefully: Ensure you understand the requirements before starting to work on a task.
+
+Focus on the End Result: While the end result is crucial, try to use idempotent Ansible modules when possible.
+
+Grading Scripts: The grading scripts provided in this course might check not only the end result on 
+the remote system but also specific module usage in your playbook, try to use the module that best 
+suits each task. 
+
+Working directory: Unless the task specifies another directory, almost all tasks use /home/ansible/rhce1 as the 
+working directory for the files and grading scripts.
+
+Naming Conventions: Name your playbooks exactly as instructed in the tasks. Failing to do so could affect your score since the grading script might not consider the solution valid.
+
+Target System: Always ensure that you are performing tasks on the correct system.
+
+Persistence: Even if a task does not explicitly state that a change should be persistent, always assume that it should survive a reboot.
+
+Partial Scoring: Due to the way in which the practice exams are delivered on Udemy, this practice exam does not provide partial scores for tasks. You must complete all requirements for the grading script to consider the solution valid.
+
