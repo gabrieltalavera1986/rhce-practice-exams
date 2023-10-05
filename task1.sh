@@ -21,7 +21,26 @@ else
     all_installed=false
 fi
 
-# If both tools are installed and functioning, print a success message
+# Check if ansible user exists and has sudo access without password on web01, web02, and dev01
+for host in web01 web02 dev01; do
+    echo "Checking if ansible user exists on $host..."
+    if ssh $host "id ansible" >/dev/null 2>&1; then
+        echo "ansible user exists on $host."
+        
+        echo "Checking if ansible user has sudo access without password on $host..."
+        if ssh $host "echo '' | sudo -S -l -U ansible" | grep -q NOPASSWD; then
+            echo "ansible user has sudo access without password on $host."
+        else
+            echo "ansible user does NOT have sudo access without password on $host."
+            all_installed=false
+        fi
+    else
+        echo "ansible user does NOT exist on $host."
+        all_installed=false
+    fi
+done
+
+# If all checks are successful, print a success message
 if $all_installed; then
     echo "This task has been completed successfully!"
     exit 0
