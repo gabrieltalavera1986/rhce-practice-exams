@@ -1,1 +1,37 @@
+Entorno y Directrices del Examen de Práctica 1:
+
+Requisitos del Host:
+
+-Necesitas cuatro maquinas virtuales (VMs) para este examen de práctica. Estos deben ser nombrados control, web01, web02 y dev01.
+
+-Las VMs pueden tener RHEL 9.2 y los laboratorios deberían funcionar sin problemas; utilizamos la siguiente imagen de Rocky Linux 9.2 para configurar el laboratorio: https://download.rockylinux.org/pub/rocky/9/isos/x86_64/Rocky-9.2-x86_64-dvd.iso
+
+-Las cuatro VMs deben tener acceso a internet para descargar paquetes de repositorios YUM públicos.
+
+-Un disco duro dinámico de 30GB puede ser usado para el sistema operativo de cada VM. Solo web02 debería tener una segunda unidad  de almacenamiento para tareas relacionadas con particionamiento.
+
+-2048MB de memoria es suficiente para cada uno de las cuatro VMs.
+
+Directrices Generales:
+
+-Lee las Preguntas Cuidadosamente: Asegúrate de entender los requisitos antes de comenzar a trabajar en una tarea.
+
+-Enfócate en el Resultado Final: Aunque el resultado final es crucial, intenta usar módulos idempotentes de Ansible cuando sea posible.
+
+-Scripts de Calificación: Los scripts de calificación proporcionados en este curso podrían revisar no solo el resultado final en el sistema remoto, sino también el uso específico del módulo que estas usando en tu playbook. Intenta usar el módulo que mejor se adapte a cada tarea para no afectar la calificación de la tarea.
+
+-Directorio de Trabajo: A menos que la tarea especifique otro directorio, casi todas las tareas usan /home/ansible/rhce1 como el directorio de trabajo para los archivos y scripts de calificación.
+
+-Convenciones de Nombres: Nombra tus playbooks exactamente como se indica en las tareas. Usar otro nombre de archivo podría afectar tu puntuación ya que el script de calificación podría no considerar válida la solución.
+
+-Sistema Objetivo: Siempre asegúrate de que estás realizando las tareas en el sistema indicado en las instrucciones.
+
+-Persistencia: Incluso si una tarea no indica explícitamente que un cambio debe ser persistente, siempre asume que debe sobrevivir a un reinicio.
+
+-Puntuación Parcial: Debido a la forma en que se entregan los exámenes de práctica en Udemy, este examen de práctica no proporciona puntuaciones parciales para las tareas. Debes completar todos los requisitos para que el script de calificación considere válida la solución.
+
+
+
+
+
 
