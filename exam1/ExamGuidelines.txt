@@ -2,17 +2,17 @@ Practice Exam 1 Environment and Guidelines:
 
 Host Requirements: 
 
--You need four hosts for this practice exam. These should be named control, web01, web02 and dev01.
+-You need four virtual machines for this practice exam. These should be named control, web01, web02 and dev01.
 
--The hosts can have RHEL 9.2 and the Labs should work without issues, we used the following Rocky Linux 9.2 image
+-The VMs can have RHEL 9.2 and the Labs should work without issues, we used the following Rocky Linux 9.2 image
 for setting up the lab: https://download.rockylinux.org/pub/rocky/9/isos/x86_64/Rocky-9.2-x86_64-dvd.iso
 
--All four hosts should have internet access to download packages from public YUM repositories.
+-All four VMs should have internet access to download packages from public YUM repositories.
 
--A 30GB dynamic hard disk can be used for the OS for each host. Only web02 should have a
+-A 30GB dynamic hard disk can be used for the OS for each VM. Only web02 should have a
 second drive for storage related tasks.
 
--2048MB of memory is enough for each of the four hosts.
+-2048MB of memory is enough for each of the four VMs.
 
 
 General Guidelines:
