@@ -39,7 +39,7 @@ if ! ssh "$STAGING_HOST" "test -f /var/ftp/welcome.txt"; then
 fi
 
 # Check the content of welcome.txt
-HOSTNAME=$(ssh "$STAGING_HOST" "hostname")
+HOSTNAME=$(ssh "$STAGING_HOST" "hostname -s")
 EXPECTED_CONTENT="welcome to the ftp service at $HOSTNAME"
 if ! ssh "$STAGING_HOST" "cat /var/ftp/welcome.txt" | grep -q "$EXPECTED_CONTENT"; then
     echo "welcome.txt content is NOT correct on $STAGING_HOST."
