@@ -3,7 +3,7 @@
 # Define users, groups, and UIDs
 USERS=("alice" "bob" "carol")
 GROUPS=("developers" "admins")
-UIDS=("1001" "1002" "1003")
+UIDS=("2001" "2002" "2003")
 
 # Check if the playbook exists
 if [[ ! -f ~/rhce2/myusers.yml ]]; then
