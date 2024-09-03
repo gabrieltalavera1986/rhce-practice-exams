@@ -8,8 +8,8 @@ Host Requirements:
 
 -You need four hosts for this practice exam. These should be named control, web03, web04 and staging01.
 
--The hosts can have RHEL 9.2 and the Labs should work without issues, we used the following Rocky Linux 9.2 image
-for setting up the lab: https://download.rockylinux.org/pub/rocky/9/isos/x86_64/Rocky-9.2-x86_64-dvd.iso
+-The hosts can have RHEL 9.4 and the Labs should work without issues, we used the following Rocky Linux 9.4 image
+for setting up the lab: https://download.rockylinux.org/pub/rocky/9/isos/x86_64/Rocky-9.4-x86_64-dvd.iso
 
 -All four hosts should have internet access to download packages from public YUM repositories.
 
