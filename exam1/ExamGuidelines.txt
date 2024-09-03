@@ -4,8 +4,8 @@ Host Requirements:
 
 -You need four virtual machines for this practice exam. These should be named control, web01, web02 and dev01.
 
--The VMs can have RHEL 9.2 and the Labs should work without issues, we used the following Rocky Linux 9.2 image
-for setting up the lab: https://download.rockylinux.org/pub/rocky/9/isos/x86_64/Rocky-9.2-x86_64-dvd.iso
+-The VMs can have RHEL 9.4 and the Labs should work without issues, we used the following Rocky Linux 9.4 image
+for setting up the lab: https://download.rockylinux.org/pub/rocky/9/isos/x86_64/Rocky-9.4-x86_64-dvd.iso
 
 -All four VMs should have internet access to download packages from public YUM repositories.
 
