@@ -1,0 +1,7 @@
+ansible-navigator:
+  execution-environment:
+    image: ghcr.io/ansible/creator-ee:v0.22.0 
+    pull:
+      policy: 
+  playbook-artifact:
+    enable:
