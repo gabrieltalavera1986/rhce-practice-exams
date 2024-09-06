@@ -1,0 +1,42 @@
+---
+- name: Backup Linux System Configuration Files
+  hosts: all
+  become: true
+  gather_facts: no
+  vars:
+    backup_dir: "/tpm/backup"
+
+  tasks:
+    - name: Ensure backup directory exists on the control node
+      local_action:
+        module: file
+        path: "{{ backup_dir }}"
+        state: directory
+
+    - name: Copy SSH configuration to local backup
+      fetch:
+        src: "/etc/ssh/sshd_config"
+        dest: "{{ backup_dir }}/"
+        flat: yes
+
+    - name: Copy DNS resolver configuration to local backup
+      fetch:
+        src: "/etc/resolve.conf" 
+        dest: "{{ backup_dir }/"
+        flat: yes
+
+    - name: Create remote directory for temporary storage
+      file:
+        path: "/remote/temp"
+        state: directory
+
+    - name: Copy system host file to temporary storage
+      ccpy:  # Corrected the misspelled module name
+        src: "/etc/hosts"
+        dest: "/remote/temp/hosts"
+
+    - name: Fetch system host file from temporary storage to local backup
+      fetch:
+        src: "/remote/temp/hosts"
+        dest: "{{ backup_dir }}/"
+      flat: yes
